@@ -1,11 +1,17 @@
-<h2>Atualizando movimentos de mensalistas: {{ mov_mensalista }} </h2>
+{% extends 'base.html' %}
+
+{% block main %}
+    <h2>Atualizando movimentos de mensalistas: {{ mov_mensalista }} </h2>
 
 
-<form action=" {% url 'core_movmensalistas_update' mov_mensalista.id %} " method="post">
-{% csrf_token %}
-{{ form.as_p }}
+    <form 
+        action="{% url 'core_movmensalistas_update' mov_mensalista.id %}"
+        method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
 
-<button type="submit">Salvar</button>
-</form>
+    <button type="submit">Salvar</button>
+    </form>
 
-<a href="{% url 'core_delete_movmens' mov_mensalista.id %}">Deletar</a>
+    <a href="{% url 'core_delete_movmens' mov_mensalista.id %}">Deletar</a>
+{% endblock main %}

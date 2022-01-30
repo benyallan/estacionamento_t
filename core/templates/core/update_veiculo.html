@@ -1,11 +1,17 @@
-<h2>Atualizando veículos: {{ veiculo }} </h2>
+{% extends 'base.html' %}
+
+{% block main %}
+    <h2>Atualizando veículos: {{ veiculo }} </h2>
 
 
-<form action=" {% url 'core_veiculo_update' veiculo.id %} " method="post">
-{% csrf_token %}
-{{ form.as_p }}
+    <form 
+        action=" {% url 'core_veiculo_update' veiculo.id %} " 
+        method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
 
-<button type="submit">Salvar</button>
-</form>
+    <button type="submit">Salvar</button>
+    </form>
 
-<a href="{% url 'core_delete_veiculo' veiculo.id %}">Deletar</a>
+    <a href="{% url 'core_delete_veiculo' veiculo.id %}">Deletar</a>
+{% endblock main %}
