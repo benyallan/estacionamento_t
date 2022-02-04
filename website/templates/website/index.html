@@ -1,7 +1,70 @@
 {% extends "website/base.html" %}
-
+{% load static %}
 
 {% block main %}
-    <h1>Seja bem vindo ao Website</h1>
+    <div class="row">
+        <div class="col-6">
+            <h2>Estacionamento 24 horas</h2>
+            <span>Slogan da sua empresa aqui...</span>
+        </div>
+        <div class="col-6">
+            <img 
+                src="{% static 'img/park.png' %}" 
+                alt="Estacionamento 24 horas"
+                width="150">
+        </div>
+    </div>
+    {% include "website/menu.html" %}
+    <div class="row">
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Animi enim tempora praesentium quo quod! Quas error quae 
+            necessitatibus nihil distinctio est cum nostrum ex doloremque, 
+            quaerat ab vero, laudantium placeat?
+        </div>
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolores minima, quae, deserunt dolorum asperiores reiciendis 
+            molestiae totam voluptatum at amet esse qui, repellat 
+            distinctio. Possimus voluptatem laudantium reiciendis 
+            maiores exercitationem?
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Ea expedita praesentium rerum voluptas enim 
+            quos illo itaque soluta nulla, sequi culpa, ut quaerat 
+            amet doloremque reprehenderit quae placeat et quis!
+        </div>
+        <div class="col-4">
+            <img 
+            src="{% static 'img/park.png' %}" 
+            alt="Estacionamento 24 horas"
+            width="150">
+        </div>
+        <div class="col-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dicta recusandae doloremque earum atque rem quos 
+            nesciunt laborum in sint eum porro saepe maxime 
+            accusamus, iste ipsa? Earum dignissimos tempore ex.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Animi enim tempora praesentium quo quod! Quas error quae 
+            necessitatibus nihil distinctio est cum nostrum ex doloremque, 
+            quaerat ab vero, laudantium placeat?
+        </div>
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolores minima, quae, deserunt dolorum asperiores reiciendis 
+            molestiae totam voluptatum at amet esse qui, repellat 
+            distinctio. Possimus voluptatem laudantium reiciendis 
+            maiores exercitationem?
+        </div>
+    </div>
+    {% include "website/footer.html" %}
 {% endblock main %}
     
