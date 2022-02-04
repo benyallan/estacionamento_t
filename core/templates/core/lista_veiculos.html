@@ -1,22 +1,56 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 
 {% block main %}
-    <h2>Lista de veículos</h2>
-
-    <ul>
-        {% for veiculo in veiculos %}
-            <li>
-                <a href="{% url 'core_veiculo_update' veiculo.id %}">
-                    {{ veiculo.placa }} 
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-
-    <form action=" {% url 'core_veiculo_novo' %} " method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-
-        <button type="submit">Cadastrar</button>
-    </form>
+    <div class="row">
+        <div class="col">
+            <h2>Cadastro de veículos</h2>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <form action=" {% url 'core_veiculo_novo' %} " method="POST">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+        
+                <button 
+                    class="btn btn-primary" 
+                    type="submit">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <h1>Lista de veículos</h1>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Proprietario</th>
+                        <th scope="col">Cor</th>
+                        <th scope="col">Observacoes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for veiculo in veiculos %}
+                        <tr>
+                            <th scope="row">{{ veiculo.id }}</th>
+                            <td>
+                                <a href="{% url 'core_veiculo_update' veiculo.id %}">
+                                    {{ veiculo.marca }} 
+                                </a>
+                            </td>
+                            <td>{{ veiculo.placa }}</td>
+                            <td>{{ veiculo.proprietario }}</td>
+                            <td>{{ veiculo.cor }}</td>
+                            <td>{{ veiculo.observacoes }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock main %}
