@@ -1,0 +1,80 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block main %}
+    <div class="row row-space">
+        <div class="col-6">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNome">Nome</label>
+                        <input type="text" class="form-control" 
+                            id="inputNome" 
+                            placeholder="Seu nome aqui...">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputsobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" 
+                            id="inputsobrenome" 
+                            placeholder="Seu sobrenome aqui...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Endereço</label>
+                    <input type="text" class="form-control" 
+                        id="inputAddress" 
+                        placeholder="Apartamento, hotel, casa, etc.">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Receber notícias
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="" 
+                        id="" cols="45" 
+                        rows="10"
+                        class="form-control">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Enviar
+                </button>
+              </form>
+        </div>
+        <div class="col-6">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Deserunt consectetur est praesentium temporibus, 
+                reprehenderit voluptas sit voluptatum ipsum exercitationem 
+                quasi nobis vero quis nam enim repudiandae adipisci at 
+                culpa iusto?
+                Accusantium ducimus aperiam, error corrupti deserunt quam 
+                dolor atque alias ullam accusamus, earum ipsa nobis 
+                eligendi aut, quae doloremque non! Rerum modi dicta 
+                explicabo accusantium veritatis totam in, odit cum?
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!
+                1m3!1d3636.7450771348995!2d-47.454671185197135!3d-24.
+                285632984328284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x94c557d418425421%3A0xa7a704299bfb9da!2sUp%
+                20Coxinhas!5e0!3m2!1spt-BR!2sbr!4v1644062771032!5m2!1spt-
+                BR!2sbr" 
+                width="500" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+{% endblock main %}

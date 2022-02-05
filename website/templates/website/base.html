@@ -11,9 +11,23 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Estacionamento 24 horas</h2>
+                <span>Slogan da sua empresa aqui...</span>
+            </div>
+            <div class="col-6">
+                <img 
+                    src="{% static 'img/park.png' %}" 
+                    alt="Estacionamento 24 horas"
+                    width="150">
+            </div>
+        </div>
+        {% include "website/menu.html" %}
         {% block main %}
         
         {% endblock main %}
+        {% include "website/footer.html" %}
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
