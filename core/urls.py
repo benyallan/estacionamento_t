@@ -22,6 +22,7 @@ from .views import (
     movMens_delete,
     mensalista_delete,
     Pdf,
+    ExportarParaCSV,
     )
 
 urlpatterns = [
@@ -94,10 +95,15 @@ urlpatterns = [
         ),
     
     
-    # Relatório PDF
+    # Relatórios
     path(
             'relatorio', 
             Pdf.as_view(), 
             name='relatorio_pdf'
+        ),
+    path(
+            'relatorio-csv', 
+            ExportarParaCSV.as_view(), 
+            name='relatorio_csv'
         ),
 ]
