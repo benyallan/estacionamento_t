@@ -2,22 +2,58 @@
     <div class="col-12">
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'website_home' %}
+                        active
+                    {% endif %}" 
+                    href="/">
+                    Home
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Seviço</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'website_servicos' %}
+                        active
+                    {% endif %}" 
+                    href="{% url 'website_servicos' %}">
+                    Seviços
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'website_sobre' %}
+                        active
+                    {% endif %}" 
+                    href="{% url 'website_sobre' %}">
+                    Sobre
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Planos</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'website_planos' %}
+                        active
+                    {% endif %}" 
+                    href="{% url 'website_planos' %}">
+                    Planos
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'website_contato' %}">Contatos</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'website_contato' %}
+                        active
+                    {% endif %}" 
+                    href="{% url 'website_contato' %}">
+                    Contatos
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'core_home' %}">Sistema</a>
+                <a class="nav-link
+                    {% if request.resolver_match.url_name == 'core_home' %}
+                        active
+                    {% endif %}" 
+                    href="{% url 'core_home' %}">
+                    Sistema
+                </a>
             </li>
         </ul>
     </div>
