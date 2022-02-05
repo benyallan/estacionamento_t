@@ -21,6 +21,7 @@ from .views import (
     movRot_delete,
     movMens_delete,
     mensalista_delete,
+    Pdf,
     )
 
 urlpatterns = [
@@ -90,5 +91,13 @@ urlpatterns = [
             'mensalistas-delete/<int:id>', 
             mensalista_delete, 
             name='core_delete_mensalista'
+        ),
+    
+    
+    # Relatório PDF
+    path(
+            'relatorio', 
+            Pdf.as_view(), 
+            name='relatorio_pdf'
         ),
 ]
